@@ -51,7 +51,7 @@ The system is architected as a modular microservice, leveraging **Docker** for p
 ### 1. Clone the Repository
 ```bash
 git clone [https://github.com/Arazmalek/centrale_rischi_parser.git](https://github.com/Arazmalek/centrale_rischi_parser.git)
-cd cr-parser-pro
+cd centrale_rischi_parser
 ```
 
 ### 2. Configuration
