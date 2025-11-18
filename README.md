@@ -99,7 +99,7 @@ curl -X POST -F "file=@/path/to/sample_report.pdf" http://localhost/parse_docume
 ## 🔒 Security & Disclaimer
 
 > **⚠️ IMPORTANT DISCLAIMER:**
-> * **Synthetic Data:** The PDF files provided in the `examples/` directory are **synthetically generated dummy documents**. No real financial data or Personally Identifiable Information (PII) from real clients is used, stored, or processed in this public repository.
+> * **Synthetic Data:** The PDF files provided in the `data_samples/` directory are **synthetically generated dummy documents**. No real financial data or Personally Identifiable Information (PII) from real clients is used, stored, or processed in this public repository.
 > * **Credential Safety:** All sensitive configuration (AWS keys, DB endpoints) has been abstracted into environment variables. The code provided here is a sanitized version of the production system, designed for portfolio demonstration purposes.
 
 ---
