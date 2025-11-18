@@ -1,0 +1,20 @@
+# --- Web API and Core Framework ---
+Flask>=2.0.0
+gunicorn>=20.0.4  # Production WSGI Server
+requests>=2.28.0
+python-dotenv>=0.21.0 # For reading local .env file
+
+# --- PDF Parsing Stack (The Core Logic) ---
+# NOTE: [cv] tag is crucial for installing OpenCV dependencies needed by Camelot
+camelot-py[cv]==0.11.0 
+PyMuPDF==1.22.0  # Used for fast PDF image conversion (fitz)
+PyPDF2>=3.0.0    # Used for PDF metadata reading
+pandas>=1.5.0    # Used for DataFrame manipulation
+
+# --- AWS / Authentication ---
+boto3>=1.26.0    # AWS SDK
+msal>=1.20.0     # Microsoft Authentication Library (for OneDrive)
+
+# --- Testing and DevOps (Local Development) ---
+pytest>=7.0.0    # Test framework
+moto>=4.1.0      # AWS Mocking library (for unit tests)
