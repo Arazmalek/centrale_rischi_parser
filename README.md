@@ -51,4 +51,57 @@ The system is architected as a modular microservice, leveraging **Docker** for p
 ### 1. Clone the Repository
 ```bash
 git clone [https://github.com/Arazmalek/centrale_rischi_parser.git](https://github.com/Arazmalek/centrale_rischi_parser.git)
-cd centrale_rischi_parser
+cd cr-parser-pro
+```
+
+### 2. Configuration
+Create a `.env` file in the root directory (based on `.env.example`) and populate it with your credentials. **Note:** Never commit real credentials to Git.
+
+```env
+# .env example
+AWS_ACCESS_KEY_ID=your_access_key
+AWS_SECRET_ACCESS_KEY=your_secret_key
+AWS_REGION=eu-south-1
+S3_BUCKET_NAME=your-bucket-name
+DYNAMO_TABLE_NAME=your-table-name
+```
+
+### 3. Build and Run with Docker
+```bash
+docker-compose up --build
+```
+The API will be available at `http://localhost:80` (via Nginx) or `http://localhost:5000` (direct).
+
+---
+
+## 📖 Usage
+
+### API Endpoint: `/parse_document`
+* **Method:** `POST`
+* **Payload:** `form-data` with a file field named `file`.
+
+**Example Request (cURL):**
+```bash
+curl -X POST -F "file=@/path/to/sample_report.pdf" http://localhost/parse_document
+```
+
+**Response:**
+```json
+{
+    "statusCode": 200,
+    "request_id": "unique-uuid-v4",
+    "message": "File accepted for processing."
+}
+```
+
+---
+
+## 🔒 Security & Disclaimer
+
+> **⚠️ IMPORTANT DISCLAIMER:**
+> * **Synthetic Data:** The PDF files provided in the `examples/` directory are **synthetically generated dummy documents**. No real financial data or Personally Identifiable Information (PII) from real clients is used, stored, or processed in this public repository.
+> * **Credential Safety:** All sensitive configuration (AWS keys, DB endpoints) has been abstracted into environment variables. The code provided here is a sanitized version of the production system, designed for portfolio demonstration purposes.
+
+---
+
+**Araz Malekazari** | *Senior Data Engineer & System Architect*
