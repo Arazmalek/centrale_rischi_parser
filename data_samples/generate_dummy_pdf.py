@@ -3,7 +3,7 @@ from fpdf import FPDF
 
 # --- Configuration ---
 # The script will output the test PDF here
-OUTPUT_DIR = "pdf_samples"
+OUTPUT_DIR = "data_samples"
 PDF_FILENAME = "test_financial_report.pdf"
 
 class CustomPDF(FPDF):
