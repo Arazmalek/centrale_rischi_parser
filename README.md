@@ -11,6 +11,8 @@ Engineered to process high volumes of financial documents with precision, this p
 ## 🏗️ Architecture & Workflow
 
 The system is architected as a modular microservice, leveraging **Docker** for portability and ease of deployment.
+
+
 ![cr_graph (1)](https://github.com/user-attachments/assets/74fce580-fc36-4ee6-ac99-9dc52e6ce065)
 
 
